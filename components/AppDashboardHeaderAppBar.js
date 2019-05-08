@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { AppBar, Toolbar, Button, Typography, Menu, MenuItem } from '@material-ui/core';
 import { AppDashboardHeaderMenuButton } from '../components/AppDashboardButtons.js'
-
+import { AppDashboardDrawer } from '../src/AppDashboard.Drawer-1.0.0.0.js';
 export class AppDashboardHeaderAppBar extends Component {
 
 	constructor(){
@@ -23,7 +23,8 @@ export class AppDashboardHeaderAppBar extends Component {
 				<AppBar position="static" color="default">
 		        	<Toolbar>
 				        <Typography variant="h5" color="inherit" style={styles.grow}>
-			              	App Dashboard
+								<Button onClick={() => {AppDashboardDrawer.showDrawer('left', 'true')}}><i class="material-icons">menu</i></Button>
+								App Dashboard
 			            </Typography>
 			        </Toolbar>
 		      </AppBar>
